@@ -1,6 +1,14 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Install seaborn if not already installed
+try:
+    import seaborn
+except ImportError:
+    st.warning("Seaborn is not installed. Installing now...")
+    st.shell.run("pip install seaborn")
 
 # Load cleaned data
 df_day = pd.read_csv('cleaned_day.csv')
