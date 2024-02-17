@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import sys
+from streamlit_option_menu import option_menu
+
+sys.path.append("/path/to/your/virtualenv/lib/python3.9/site-packages")
+
 
 # Load cleaned data
 df_day = pd.read_csv('cleaned_day.csv')
